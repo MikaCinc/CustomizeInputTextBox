@@ -1,0 +1,26 @@
+.pinput {
+	color: #0f0;
+	font-family: courier new;
+}
+
+#input {
+	transition-duration: 0.4s;
+	font-family: verdana;
+}
+
+div {
+	border-bottom: 1px solid #0f0;
+}
+
+#kod {
+	text-align: justify;
+	color: white;
+	font-family: courier new;
+	line-height: 1px;
+	font-size: 12px;
+}
+
+table {
+	margin-left: auto;
+    margin-right: auto;
+}

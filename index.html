@@ -1,0 +1,100 @@
+<html>
+	<head>
+			<script type="text/javascript" src="code.js"></script>
+			<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1 id="h1" style="color: #00ff00; text-align: center; font-family: courier new">Customizable Input text box</h1>
+		<table>
+		<tr>
+			<td>
+				<div style="height: 400px; overflow: auto">
+					<div id="div_backgroundColor">
+						<p class="pinput">Pozadinska boja:</p>
+						<input type="color" id="input_color" value="#ffffff" oninput="bg_color()">
+					</div>
+					<div id="div_textColor">
+						<p class="pinput">Boja teksta:</p>
+						<input type="color" id="input_textColor" value="#000000" oninput="text_color()">
+					</div>
+					<div id="div_borders">
+						<p class="pinput">Borders:</p>
+						<input type="number" size="3" id="borders_px" placeholder="px..." max="200" style="width: 50px;" oninput="borders()">
+						<select id="borders_type" onchange="borders()">
+							<option>solid</option>
+							<option>dotted</option>
+							<option>dashed</option>
+							<option>double</option>
+						</select>
+						<input type="color" id="borders_color" value="#00ff00" oninput="borders()">
+						<p style="font-size: 10pt;" class="pinput">Border radius:</p>
+						<input type="range" id="border-radius_px" min="0" max="250" oninput="border_radius()">
+					</div>
+					<div id="div_size">
+						<p class="pinput">Veličina:</p>
+						<p style="font-size: 10pt;" class="pinput">Širina:</p>
+						<input type="range" max="500" min="1" id="input_width" value="150" oninput="size1()">
+						<p style="font-size: 10pt;" class="pinput">Visina:</p>
+						<input type="range" max="500" min="1" id="input_height" value="30" oninput="size1()">
+					</div>
+					<div id="div_placeholder">
+						<p class="pinput">Placeholder:</p>
+						<input type="text" id="input_placeholder" oninput="placeholder12()">
+					</div>
+					<div id="div_other">
+						<p class="pinput">Disabled: </p><input type="checkbox" id="input_disabled" onchange="disabled12()">
+						<p class="pinput">Velika slova: </p><input type="checkbox" id="input_upperCase" onchange="upperCase12()">
+						<p class="pinput">Font-family: </p><input type="text" id="input_font-family"  oninput="font_family()">
+						<p class="pinput">Font-size: </p><input type="range" id="input_font-size" min="1" default="18" max="100" oninput="font_size()">
+					</div>
+					<div id="div_cursor">
+						<p class="pinput">Cursor:</p>
+						<select id="input_cursor" oninput="cursor12()">
+							<option>default</option>
+							<option>wait</option>
+							<option>pointer</option>
+							<option>text</option>
+							<option>progress</option>
+							<option>not-allowed</option>
+							<option>none</option>
+							<option>move</option>
+							<option>help</option>
+						</select>
+					</div>
+					<div id="div_transition">
+						<p class="pinput">Tranzicije:</p>
+						<input type="range" min="1" max="9" id="input_transition" default="4" oninput="transition12()">
+					</div>
+					<div id="div_padding">
+						<p class="pinput">Padding:</p>
+						<input type="range" min="1" max="100" id="input_padding" default="2" oninput="padding12()">
+					</div>
+				</div>
+			</td>
+			<td style="width: 30px;">
+			</td>
+			<td>
+				<input type="text" id="input">
+			<td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<p class="pinput"> Kopiraj CSS: </p>
+				<div id="kod">
+					<p id="bg_color"></p>
+					<p id="color"></p>
+					<p id="borders"></p>
+					<p id="border-radius"></p>
+					<p id="width"></p>
+					<p id="height"></p>
+					<p id="cursor"></p>
+					<p id="transition"></p>
+					<p id="padding"></p>
+					<p id="font_size"></p>
+					<p id="font_family"></p>
+				</div>
+			</td>
+		</tr>
+		</table>
+	</body>
+</html>
